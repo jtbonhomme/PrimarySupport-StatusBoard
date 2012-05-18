@@ -1,0 +1,15 @@
+#marquee {
+	clear: both;
+}
+
+#marquee .scroll {
+	white-space: nowrap;
+    overflow: hidden;
+    font-size: 40px;
+    overflow-x:-webkit-marquee;
+    -webkit-marquee-direction: backwards;
+    -webkit-marquee-style: scroll;
+    -webkit-marquee-speed: fast;
+    -webkit-marquee-increment: small;
+    -webkit-marquee-repetition: infinite;
+}

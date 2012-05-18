@@ -1,0 +1,33 @@
+#grid {
+	width: 50%;
+	height: 800px;
+}
+
+#grid span {
+	font-size: 32px;
+	border-spacing: 10px 10px;
+	background-color: #1c2020;
+	text-align: left;
+	float: left;
+	padding-left: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222), color-stop(0.5, #222), color-stop(0.5, #333));
+}
+
+/* widths */
+.cell_0 {
+	width: 69%;
+	padding-top: 10px;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-right: 5px;
+}
+.cell_1 {
+	width: 24%;
+	padding-top: 10px;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+}

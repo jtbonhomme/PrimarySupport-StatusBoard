@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'Cutouts';
+  src: url('../cutouts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wingdings';
+  src: url('../wingding.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+	background-color: #111111;
+	color: #ffffff;
+	font-family: verdana, arial, helvetica, sans-serif;
+	vertical-align: middle;
+	-webkit-text-stroke: 1px transparent;
+	text-align: center;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+.mega {
+	font-size: 40px;
+}
+
+
+.jumbo {
+	font-size: 28px;
+}
+
+
+.champagne {
+	background-image: url('http://intranet/ict/panic/images/champagne.png');
+	width: 547px;
+	height: 1440px;
+	margin-left: 600px;
+	margin-top: -200px;
+	-webkit-transform:rotate(-55deg);
+	position: absolute;
+	z-index: 1000;
+}
+
+
+.icon {
+	color: #ded00b;
+	font-style: normal;
+	font-family: 'Cutouts';
+	font-size: 60px;
+}
+
+
+#statusboard {
+	width: 1920px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bargraph {
+	width: 50%;
+	float: left;
+}
+
+.grid {
+	width: 50%;
+	margin: 0px 0 10px 0;
+	float: right;
+}
+
+.countdown {
+	width: 50%;
+	margin: 10px 0 10px 0;
+	float: left;
+}
+
+.arrow {
+	width: 16%;
+	margin: 10px 10px 0 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}
+
+.emailTraffic {
+	width: 47%;
+	margin: 10px 10px 0 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}
+
+.clock {
+	width: 14%;
+	margin: 10px 10px 0 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}
+
+.newJobs {
+	width: 14%;
+	margin: 10px 10px 0 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}
+
+.totalJobs {
+	width: 16%;
+	margin: 10px 10px 0 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}
+
+.marquee {
+	width: 100%;
+	margin: 10px 0 0 0px;
+	float: left;
+	clear: both;
+	background-color: red;
+}
+.marquee .scroll {
+	white-space: nowrap;
+    overflow: hidden;
+    font-size: 40px;
+    overflow-x:-webkit-marquee;
+    -webkit-marquee-direction: backwards;
+    -webkit-marquee-style: scroll;
+    -webkit-marquee-speed: fast;
+    -webkit-marquee-increment: small;
+    -webkit-marquee-repetition: infinite;
+}
+
+.primary {
+	width: 50%;
+	margin: 10px 0 0 0px;
+	float: left;
+}
+
+.clear
+{
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}

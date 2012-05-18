@@ -1,0 +1,46 @@
+#arrow_icon {
+	font: normal 65px 'Cutouts';
+	display: block;	
+}
+
+.upgreenarrow {
+	color: #15af00;
+}
+
+.downgreenarrow {
+	color: #15af00;
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(180deg);
+}
+
+.greenPlus {
+	color: #15af00;
+	-webkit-transform: rotate(45deg); 
+	-moz-transform: rotate(45deg);
+}
+
+.downredarrow {
+	color: #e31d18;
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(180deg);
+}
+
+.upredarrow {
+	color: #e31d18;
+}
+.zero-block {
+	color: #3d69fe;
+}
+
+#blocker_icon {
+	font: normal 900px 'Wingdings';
+	display: block;	
+}
+.blocker {
+	color: red;
+	text-align: center;
+	position: absolute;
+	z-index: 2;
+	margin-left: 550px;
+	opacity: 0.5;
+}

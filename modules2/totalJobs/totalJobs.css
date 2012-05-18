@@ -1,0 +1,11 @@
+#totalJobs {
+	width: 31%;
+	margin: 10px 10px 0 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #111111;
+    background-image: -moz-linear-gradient(100% 100% 180deg, #434d4d, #101010) !important;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434d4d), to(#101010)) !important;
+    -webkit-border-radius: 22px;
+	float: left;
+}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Cutouts';
+  src: url('../cutouts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wingdings';
+  src: url('../wingding.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+	background-color: #111111;
+	color: #ffffff;
+	font-family: verdana, arial, helvetica, sans-serif;
+	vertical-align: middle;
+	-webkit-text-stroke: 1px transparent;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#left {
+	float: left;
+	width: 50%;
+}
+
+#right {
+	float: left;
+	width: 50%;
+}
+
+#footer {
+	width: 100%;
+}
+
+.mega {
+	font-size: 40px;
+}
+
+
+.jumbo {
+	font-size: 28px;
+}
+
+.clear {
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+.champagne {
+	background-image: url('http://intranet/ict/panic/images/champagne.png');
+	width: 547px;
+	height: 1440px;
+	margin-left: 600px;
+	margin-top: -200px;
+	-webkit-transform:rotate(-55deg);
+	position: absolute;
+	z-index: 1000;
+}

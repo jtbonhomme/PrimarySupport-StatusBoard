@@ -1,0 +1,11 @@
+.countdown {
+	width: 100%;
+	margin: 10px 0 10px 0;
+}
+
+.icon {
+	color: #ded00b;
+	font-style: normal;
+	font-family: 'Cutouts';
+	font-size: 60pt%;
+}
