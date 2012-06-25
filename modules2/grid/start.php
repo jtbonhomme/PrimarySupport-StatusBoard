@@ -27,7 +27,9 @@ if (count($jobsUpdatedToday) > 0) {
 		$output .= "<span class=\"cell_0\">";
 		
 		// replace '-- job logged by xx on behalf of yy --<br />' for the grid
-		$jobText = preg_replace("/--.*--<br \/>/", "", $job->description(100));
+		$jobText = $job->description(150);
+		$jobText = preg_replace("/--.*--<br \/>/", " ", $jobText);
+		$jobText = preg_replace("/--.*--<br>/", " ", $jobText);
 		
 		// strike through the job if it's been closed
 		if ($job->active == 0) {
@@ -36,7 +38,7 @@ if (count($jobsUpdatedToday) > 0) {
 			$output .= $userGravatar . $jobText;
 		}
 		
-		$loggedBy = substr($poster->firstname, 0, 20);
+		$loggedBy = substr($poster->firstname . " " . $poster->lastname, 0, 20);
 				
 		$output .= "</span>";
 		$output .= "<span class=\"cell_1\">" . $loggedBy . "</span>";

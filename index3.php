@@ -31,8 +31,11 @@ require_once("engine/initialise.php");
 	<section id="totalJobsModule">
 		<?php include_once("modules2/totalJobs/start.php"); ?>
 	</section>
+	<section id="leadersModule">
+		<?php include_once("modules2/leaders/start.php"); ?>
+	</section>
 	<section id="primaryModule">
-		<?php include_once("modules2/primary/start.php"); ?>
+		<?php //include_once("modules2/primary/start.php"); ?>
 	</section>
 </div>
 

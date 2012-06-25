@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="modules2/countdown/countdown.css" type="text/css" media="screen" />
 
 <?php
-$countdownDate = "2012-04-01 00:01";
-$countdownName = "INDEPENDENCE DAY";
+$countdownDate = "2012-07-24 12:00";
+$countdownName = "THE END OF TERM";
 
 /* DEFAULTS */
 date_default_timezone_set('Europe/London');
