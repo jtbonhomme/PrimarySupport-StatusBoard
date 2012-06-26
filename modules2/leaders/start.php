@@ -7,9 +7,9 @@ $jobs = new jobsClass();
 $newJobsToday = count($jobs->new_jobs_by_day());
 
 foreach ($technicians AS $technician) {	
-	$updates = jobsClass::find_by_sql("SELECT * FROM jobs WHERE entry BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() AND type='Response' AND user_uid = '" . $technician->uid . "'");
-	$closedJobs = jobsClass::find_by_sql("SELECT * FROM jobs WHERE job_closed BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() AND type='Job' AND active = '0' AND owner_uid = '" . $technician->uid . "'");
-	$avgTicketTime = jobsClass::find_by_sql("SELECT AVG(DATEDIFF(job_closed, entry)) AS last_update FROM jobs WHERE entry BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() AND TYPE = 'Job' AND active = 0 AND owner_uid = '" . $technician->uid . "'");
+	$updates = jobsClass::find_by_sql("SELECT * FROM jobs WHERE entry BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()+1 AND type='Response' AND user_uid = '" . $technician->uid . "'");
+	$closedJobs = jobsClass::find_by_sql("SELECT * FROM jobs WHERE job_closed BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()+1 AND type='Job' AND active = '0' AND owner_uid = '" . $technician->uid . "'");
+	$avgTicketTime = jobsClass::find_by_sql("SELECT AVG(DATEDIFF(job_closed, entry)) AS last_update FROM jobs WHERE entry BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()+1 AND TYPE = 'Job' AND active = 0 AND owner_uid = '" . $technician->uid . "'");
 	$avgTicketTime = $avgTicketTime[0];
 	
 	$output  = "<div id=\"leaders\">";
