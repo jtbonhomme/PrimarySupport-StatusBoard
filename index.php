@@ -1,73 +1,61 @@
-<!doctype html>
 <?php
 // include everything we might need!
 require_once("engine/initialise.php");
-define('CONFIG', 'config.json');
-
-// FIRST: read in the configuration
-$config = fopen(CONFIG, 'r');
-$dataSet = fread($config, filesize(CONFIG));
-$dataSet = json_decode($dataSet);
-
 ?>
+<!doctype html>
 <html lang="en">
 <head>
 	<title>Wallingford School - ICT Facilities Status Board</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="styles/grid.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="styles/types.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="styles/arrow.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="styles/snowflake.css" type="text/css" media="screen" />
+	<meta http-equiv="refresh" content="60">
+	<link rel="stylesheet" href="styles/style02.css" type="text/css" media="screen" />
 	<script type='text/javascript' src='engine/jquery.js'></script>
 	<script type='text/javascript' src='engine/board.js'></script>
 	<script type='text/javascript' src='js/highcharts.js'></script>
 	<script type='text/javascript' src='js/highcharts.src.js'></script>
 </head>
 
-<body>	
-<section id="statusboard">
-<?php
-$totalJobs = jobsClass::active_jobs();
+<body>
+<div id="left">
+	<section id="bargraphModule">
+		<?php include_once("modules2/bargraph/start.php"); ?>
+	</section>
+	<section id="countdownModule">
+		<?php include_once("modules2/countdown/start.php"); ?>
+	</section>
+	<section id="updatesModule">
+		<?php include_once("modules2/updates/start.php"); ?>
+	</section>
+	<section id="newJobsModule">
+		<?php include_once("modules2/newJobs/start.php"); ?>
+	</section>
+	<section id="totalJobsModule">
+		<?php include_once("modules2/totalJobs/start.php"); ?>
+	</section>
+	<section id="leadersModule">
+		<?php include_once("modules2/leaders/start.php"); ?>
+	</section>
+	<section id="primaryModule">
+		<?php //include_once("modules2/primary/start.php"); ?>
+	</section>
+</div>
 
-if (count($totalJobs) <= 50) {
-	// only do this if the total jobs is less than 50!
-	echo ("<div class=\"champagne\"></div>");
-}
+<div id="right">
+	<section id="typesModule">
+		<?php include_once("modules2/types/start.php"); ?>
+	</section>
+	<section id="emailTrafficModule">
+		<?php include_once("modules2/emailTraffic/start.php"); ?>
+	</section>
+	<section id="gridModule">
+		<?php include_once("modules2/grid/start.php"); ?>
+	</section>
+</div>
 
-?>
-
-<?php
-	foreach($dataSet->modules as $module) {
-		$argstr = array();
-	    $args = $module->args;
-	    $args->width = $module->width;
-	
-	    foreach($args as $key => $val) {
-	        $argstr[] = "$key=" . urlencode($val);
-	    }
-	
-	    $argstr = "'" . implode("&", $argstr) . "'";
-	    
-	    $style = "width: {$module->width}px;";
-	
-	    if ($module->height) $style .= " height: {$module->height}px";
-	    
-	    
-		echo ("<article id=\"" . $module->name . "\" class=\"" . $module->name . "\">");
-		echo "<div class='module $module->class' id='$module->name' style='$style'></div>\n";
-	    echo "\t<script type='text/javascript'>activate_module('$module->name', $module->update, $argstr);</script>\n\n";
-		echo ("</article>");
-	}
-?>
-</section>	
-	
-<footer>
-</footer>
-<?php
-
-// clean up after yourself! Close the db connection
-$database->close_connection();
-?>
+<div id="footer">
+	<section id="marqueeModule">
+		<?php include_once("modules2/marquee/start.php"); ?>
+	</section>
+</div>
 </body>
 </html>
